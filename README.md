@@ -38,6 +38,6 @@ Utilizando la aplicación generada con el paquete **create-app-react** que se en
 
 ## Indicaciones finales
 
-El tiempo para desarrollar este desafío es de 90 minutos. Si consideras que te faltó implementar alguna mejora o requisito del desafío, puedes agregar actualizar el archivo PENDIENTE.md que se encuentra en la ruta raíz del repositorio.
+El tiempo para desarrollar este desafío es de 90 minutos. Si consideras que te faltó implementar alguna mejora o requisito del desafío, puedes agregar tus comentarios actualizando el archivo PENDIENTE.md que se encuentra en la ruta raíz del repositorio.
 
 Suerte!
