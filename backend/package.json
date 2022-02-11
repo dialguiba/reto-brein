@@ -4,12 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon app.js",
     "serve": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brein",
   "license": "UNLICENSED",
   "dependencies": {
-    "express": "^4.17.2"
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
   }
 }
