@@ -1,4 +1,3 @@
-Aumentar el Fontsize del titulo
+Aumentar el Fontsize del titulo, Quitarle los grid en Y, disminuirle el grosor a las líneas de la leyenda (Ver por qué no hace caso a las propiedades que le paso en las options)
 Aumentarle padding a los costados de las líneas para que no esté pegado
-Quitarle los grid en Y
-Disminuirle el grosor a las líneas de la leyenda
+Modificar el prop que se envía el componente para que sea más reusable
