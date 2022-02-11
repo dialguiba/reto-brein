@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Graph } from "./components/chart/Graph";
 import { useEffect, useState } from "react";
@@ -7,7 +6,7 @@ import axios from "axios";
 import moment from "moment";
 
 function App() {
-  const [onzas, setOnzas] = useState();
+  const [dataset, setDatset] = useState();
 
   useEffect(() => {
     const requestForReal = api.get("/reales");
@@ -29,7 +28,7 @@ function App() {
             sensores: dataOne.sensores,
           };
 
-          setOnzas(data);
+          setDatset(data);
         })
       )
       .catch((error) => {
@@ -38,7 +37,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Graph dataset={onzas} />
+      <Graph dataset={dataset} title="Comparación de resultados" />
     </div>
   );
 }

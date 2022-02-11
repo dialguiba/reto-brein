@@ -2,30 +2,35 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 
-export const Graph = ({ dataset }) => {
+export const Graph = ({ dataset, title }) => {
   const [chartData, setChartData] = useState();
-  const [options, setOptions] = useState();
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "bottom",
+      },
+      title: {
+        display: true,
+        text: title,
+        fontSize: 20,
+      },
+      scales: {
+        xAxes: [
+          {
+            display: false,
+          },
+        ],
+      },
+    },
+  };
+  useEffect(() => {
+    ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+  }, []);
 
   useEffect(() => {
     if (dataset) {
-      ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
-
-      const options = {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: "bottom",
-          },
-          title: {
-            display: true,
-            text: "Comparación de resultados",
-            fontSize: 100,
-          },
-        },
-      };
-
-      setOptions(options);
-
       const labels = dataset.fechas;
 
       const data = {
